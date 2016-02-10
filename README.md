@@ -1,17 +1,18 @@
-# KRActivityIndicatorView
+  # KRActivityIndicatorView
 KRActivityIndicatorView is a simple and customizable activity indicator written in Swift2.
 
 You can add KRActivityIndicatorView from IB or ViewController.
 
 
 ### Example
+https://www.youtube.com/watch?v=UZTlGpY0CU8
 [![](http://img.youtube.com/vi/UZTlGpY0CU8/0.jpg)](https://www.youtube.com/watch?v=UZTlGpY0CU8)
 
 ## Install
 Drag `KRActivityIndicatorView.swift` to your Xcode project.
 
 ## Usage
-(see sample Xcode project)
+(see sample Xcode project)  
 
 Usage is almost same as UIActivityIndicatorView.
 
