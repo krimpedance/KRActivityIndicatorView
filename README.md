@@ -6,7 +6,7 @@ You can add KRActivityIndicatorView from IB or ViewController.
 
 ### Example
 https://www.youtube.com/watch?v=UZTlGpY0CU8
-　
+　　　　
 [![](http://img.youtube.com/vi/UZTlGpY0CU8/0.jpg)](https://www.youtube.com/watch?v=UZTlGpY0CU8)
 
 ## Install
