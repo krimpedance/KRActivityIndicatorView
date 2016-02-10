@@ -5,7 +5,7 @@ You can add KRActivityIndicatorView from IB or ViewController.
 
 
 ### Example
-<iframe width="420" height="315" src="https://www.youtube.com/embed/UZTlGpY0CU8" frameborder="0" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/UZTlGpY0CU8/0.jpg)](https://www.youtube.com/watch?v=UZTlGpY0CU8)
 
 ## Install
 Drag `KRActivityIndicatorView.swift` to your Xcode project.
