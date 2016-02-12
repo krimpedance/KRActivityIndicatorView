@@ -1,18 +1,18 @@
 //
-//  KRProgressIndicatorView.swift
+//  KRProgressIndicator.swift
 //
 //  Copyright © 2016年 Krimpedance. All rights reserved.
 //
 
 import UIKit
 
-enum KRActivityIndicatorViewStyle {
+public enum KRActivityIndicatorViewStyle {
     case Black, White, Color(UIColor, UIColor?)
     case LargeBlack, LargeWhite, LargeColor(UIColor, UIColor?)
 }
 
 @IBDesignable
-final class KRActivityIndicatorView :UIView {
+public final class KRActivityIndicatorView :UIView {
     @IBInspectable private(set) var startColor :UIColor = UIColor.blackColor() {
         willSet {
             if self.largeStyle { self.activityIndicatorViewStyle = .LargeColor(newValue, self.endColor) }
@@ -34,17 +34,17 @@ final class KRActivityIndicatorView :UIView {
         }
     }
     
-    @IBInspectable var animating :Bool = false
+    @IBInspectable var animating :Bool = true
     @IBInspectable var hidesWhenStopped :Bool = false
    
     
     private var animationLayer = CALayer()
     
-    var activityIndicatorViewStyle :KRActivityIndicatorViewStyle = .Black {
+    public var activityIndicatorViewStyle :KRActivityIndicatorViewStyle = .Black {
         didSet { self.setNeedsDisplay() }
     }
     
-    var isAnimating :Bool {
+    public var isAnimating :Bool {
         get {
             if self.animationLayer.animationForKey("rotate") != nil { return true }
             else { return false }
@@ -55,19 +55,19 @@ final class KRActivityIndicatorView :UIView {
     /**
         Initializer --------------
     */
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override init(frame :CGRect) {
+    public override init(frame :CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRectMake(0, 0, 20, 20))
     }
     
-    convenience init(position :CGPoint, activityIndicatorStyle style :KRActivityIndicatorViewStyle) {
+    public convenience init(position :CGPoint, activityIndicatorStyle style :KRActivityIndicatorViewStyle) {
         if style.isLargeStyle {
             self.init(frame: CGRectMake(position.x, position.y, 50, 50))
         } else {
@@ -80,7 +80,7 @@ final class KRActivityIndicatorView :UIView {
     // -------------------------
     
     
-    override func drawRect(rect: CGRect) {
+    public override func drawRect(rect: CGRect) {
         // recreate AnimationLayer
         self.animationLayer.removeFromSuperlayer()
         self.animationLayer = CALayer()
@@ -113,7 +113,7 @@ final class KRActivityIndicatorView :UIView {
     }
     
     
-    func startAnimating() {
+    public func startAnimating() {
         if let _ = self.animationLayer.animationForKey("rotate") { return }
         
         let animation = CABasicAnimation(keyPath: "transform.rotation")
@@ -130,7 +130,7 @@ final class KRActivityIndicatorView :UIView {
         self.animationLayer.addAnimation(animation, forKey: "rotate")
     }
     
-    func stopAnimating() {
+    public func stopAnimating() {
         self.animationLayer.removeAllAnimations()
         
         if self.hidesWhenStopped {
@@ -190,6 +190,7 @@ extension KRActivityIndicatorViewStyle {
         }         
     }
     
+    // privates --------------------
     private var isLargeStyle :Bool {
         switch self {
             case .Black, .White, .Color(_, _) : return false
@@ -209,7 +210,7 @@ extension KRActivityIndicatorViewStyle {
     private var endColor :UIColor {
         switch self {
             case .Black, .LargeBlack : return UIColor.lightGrayColor()
-            case .White, .LargeWhite : return UIColor(white: 0.9, alpha: 1)
+            case .White, .LargeWhite : return UIColor(white: 0.7, alpha: 1)
             case let .Color(start, end) : return end ?? start
             case let .LargeColor(start, end) : return end ?? start
         }
