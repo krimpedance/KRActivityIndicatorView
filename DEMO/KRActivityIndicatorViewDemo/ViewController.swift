@@ -33,11 +33,6 @@ class ViewController: UIViewController {
         
         self.activityIndicator.layer.borderWidth = 2
         self.activityIndicator.layer.borderColor = UIColor.blackColor().CGColor
-        
-        
-        let activityIndicator = KRActivityIndicatorView(position: CGPointZero, activityIndicatorStyle: .Black)
-        activityIndicator.animating = true
-        self.view.addSubview(activityIndicator)
     }
     
     func switchColorPartsHidden(hidden :Bool) {
