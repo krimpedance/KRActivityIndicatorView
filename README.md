@@ -36,8 +36,8 @@ activityIndicator.stopAnimating()
 * `.Color(start, end)`, `.LargeColor(start, end)` - `start`, `end` is UIColor property. You can set gradient first and last color.
 
 #### Current available params on IB:
-* `startColor` - gradient first color.
-* `endColor` - gradient end color.
+* `headColor` - gradient first color.
+* `tailColor` - gradient end color.
 * `largeStyle` - Size of KRActivityIndicatorView (`on` is large)
 * `animating` - Animation of activity indicator when it's shown
 * `hidesWhenStopped` - calls `setHidden` when call `stopAnimating()`
