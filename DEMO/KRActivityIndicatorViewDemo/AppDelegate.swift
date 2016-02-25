@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  KRActivityIndicatorViewDemo
 //
-//  Created by Ryunosuke Kirikihira on 2016/02/10.
 //  Copyright © 2016年 Krimpedance. All rights reserved.
 //
 
