@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,21 +21,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-B7-vqo" customClass="KRActivityIndicatorView" customModule="KRActivityIndicatorViewDemo" customModuleProvider="target">
-                                <rect key="frame" x="110" y="28" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-B7-vqo" customClass="KRActivityIndicatorView" customModule="KRActivityIndicatorView">
+                                <rect key="frame" x="125" y="28" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ObQ-zZ-GD1"/>
-                                    <constraint firstAttribute="width" constant="100" id="a9x-dH-IJP"/>
+                                    <constraint firstAttribute="height" constant="70" id="ObQ-zZ-GD1"/>
+                                    <constraint firstAttribute="width" constant="70" id="a9x-dH-IJP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="largeStyle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isLarge" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-Us-mld">
-                                <rect key="frame" x="12" y="165" width="297" height="29"/>
+                                <rect key="frame" x="12" y="135" width="297" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="9lA-Xh-AdN"/>
                                 </constraints>
@@ -41,20 +44,20 @@
                                     <segment title="Stop"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedAnimatingControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="pQS-nd-YbF"/>
+                                    <action selector="changedAnimatingControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Glt-Wm-8F4"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB8-kT-TXb">
-                                <rect key="frame" x="118" y="136" width="85" height="21"/>
+                                <rect key="frame" x="118" y="106" width="85" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="nZj-DT-iPC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cfA-C3-tUE">
-                                <rect key="frame" x="12" y="230" width="297" height="29"/>
+                                <rect key="frame" x="12" y="200" width="297" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="x8x-3N-eqV"/>
                                 </constraints>
@@ -63,29 +66,38 @@
                                     <segment title="True"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedHidesWhenStoppedControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="B02-gk-ogD"/>
+                                    <action selector="changedHidesWhenStoppedControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="jVI-dn-t4h"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HidesWhenStopped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df3-5F-DOq">
-                                <rect key="frame" x="79" y="201" width="162" height="21"/>
+                                <rect key="frame" x="79" y="171" width="162" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ngU-wx-7sE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRActivityIndicatorViewStyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-3P-jig">
-                                <rect key="frame" x="46" y="266" width="229" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRActivityIndicatorView size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-3P-jig">
+                                <rect key="frame" x="46" y="236" width="229" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Yn8-cy-SHL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRActivityIndicatorViewStyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOq-ww-A4U">
+                                <rect key="frame" x="50.5" y="301" width="220.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Glo-Fp-vFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-7C-9Jy">
-                                <rect key="frame" x="12" y="295" width="297" height="29"/>
+                                <rect key="frame" x="12" y="265" width="297" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="enQ-qP-H4C"/>
                                 </constraints>
@@ -94,25 +106,24 @@
                                     <segment title="Large"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedActivityIndicatorViewStyleControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="aqA-Qj-W0q"/>
+                                    <action selector="changedActivityIndicatorViewSizeControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="sp1-az-SCe"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z46-Lt-xhV">
-                                <rect key="frame" x="12" y="344" width="297" height="29"/>
+                                <rect key="frame" x="12" y="330" width="297" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="xgf-3t-JjU"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Black"/>
-                                    <segment title="White"/>
+                                    <segment title="Default"/>
                                     <segment title="Color"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedActivityIndicatorViewColorControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="esd-hs-gHy"/>
+                                    <action selector="changedActivityIndicatorViewStyleControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="FID-dP-Y6G"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-TG-z4N">
-                                <rect key="frame" x="7" y="409" width="307" height="29"/>
+                                <rect key="frame" x="7" y="395" width="307" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="eTx-dj-eq3"/>
                                 </constraints>
@@ -124,11 +135,11 @@
                                     <segment title="Yellow"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedStartColorControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="tPk-YV-ByX"/>
+                                    <action selector="changedHeadColorControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="X2T-iD-Cih"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ix0-vt-bQ1">
-                                <rect key="frame" x="7" y="474" width="307" height="29"/>
+                                <rect key="frame" x="7" y="460" width="307" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="wtM-c8-uTY"/>
                                 </constraints>
@@ -140,34 +151,35 @@
                                     <segment title="Yellow"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changedEndColorControlValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="Djv-oX-enC"/>
+                                    <action selector="changedTailColorControlValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="oEm-Bj-A6c"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EW-mg-n3A">
-                                <rect key="frame" x="114" y="380" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EW-mg-n3A">
+                                <rect key="frame" x="114" y="366" width="92" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Kd6-3c-NhH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTR-3S-Njr">
-                                <rect key="frame" x="119" y="445" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tail Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTR-3S-Njr">
+                                <rect key="frame" x="119" y="431" width="83" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YtA-hz-o98"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="toj-3P-jig" firstAttribute="top" secondItem="cfA-C3-tUE" secondAttribute="bottom" constant="8" id="0y0-ip-bvZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z46-Lt-xhV" secondAttribute="trailing" constant="-5" id="23B-3f-g6L"/>
                             <constraint firstItem="cfA-C3-tUE" firstAttribute="top" secondItem="df3-5F-DOq" secondAttribute="bottom" constant="8" id="4zr-TW-ANc"/>
                             <constraint firstItem="Ix0-vt-bQ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="7FO-qk-7Ln"/>
+                            <constraint firstItem="z46-Lt-xhV" firstAttribute="top" secondItem="DOq-ww-A4U" secondAttribute="bottom" constant="8" id="7rh-qk-cDe"/>
                             <constraint firstItem="QWj-TG-z4N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="7ya-jg-Jyn"/>
                             <constraint firstItem="QWj-TG-z4N" firstAttribute="top" secondItem="3EW-mg-n3A" secondAttribute="bottom" constant="8" id="8Jt-Do-Fep"/>
                             <constraint firstItem="ibP-Us-mld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="Ahd-yV-4kc"/>
@@ -182,6 +194,7 @@
                             <constraint firstItem="df3-5F-DOq" firstAttribute="top" secondItem="ibP-Us-mld" secondAttribute="bottom" constant="8" id="Xu1-ib-41X"/>
                             <constraint firstItem="Vwg-7C-9Jy" firstAttribute="top" secondItem="toj-3P-jig" secondAttribute="bottom" constant="8" id="YS4-Ca-36a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lTR-3S-Njr" secondAttribute="trailing" constant="102" id="cbG-mv-1cr"/>
+                            <constraint firstItem="DOq-ww-A4U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7Q-li-ANF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3EW-mg-n3A" secondAttribute="trailing" constant="98" id="eNS-r5-9mW"/>
                             <constraint firstItem="lTR-3S-Njr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="gYV-ej-XJE"/>
                             <constraint firstItem="Ix0-vt-bQ1" firstAttribute="top" secondItem="lTR-3S-Njr" secondAttribute="bottom" constant="8" id="gZt-4Z-AtM"/>
@@ -194,7 +207,7 @@
                             <constraint firstItem="3EW-mg-n3A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="nG2-u7-YxK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="toj-3P-jig" secondAttribute="trailing" constant="29" id="nR7-8u-mgI"/>
                             <constraint firstItem="xB8-kT-TXb" firstAttribute="top" secondItem="fFW-B7-vqo" secondAttribute="bottom" constant="8" id="o5Z-a6-w7V"/>
-                            <constraint firstItem="z46-Lt-xhV" firstAttribute="top" secondItem="Vwg-7C-9Jy" secondAttribute="bottom" constant="21" id="oQD-Ug-DPr"/>
+                            <constraint firstItem="DOq-ww-A4U" firstAttribute="top" secondItem="Vwg-7C-9Jy" secondAttribute="bottom" constant="8" id="pnu-rb-aJ8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QWj-TG-z4N" secondAttribute="trailing" constant="-10" id="rNB-XI-gPP"/>
                             <constraint firstItem="xB8-kT-TXb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="sb7-BW-YrT"/>
                             <constraint firstItem="cfA-C3-tUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="tFK-dc-qXK"/>
@@ -215,4 +228,9 @@
             <point key="canvasLocation" x="202" y="310"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

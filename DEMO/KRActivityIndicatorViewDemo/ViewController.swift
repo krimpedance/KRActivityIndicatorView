@@ -69,87 +69,65 @@ extension ViewController {
       }
    }
 
-   @IBAction func changedActivityIndicatorViewStyleControlValue(sender: UISegmentedControl) {
-      if sender.selectedSegmentIndex == 0 {
-         activityIndicator.largeStyle = false
-      } else {
-         activityIndicator.largeStyle = true
-      }
+   @IBAction func changedActivityIndicatorViewSizeControlValue(sender: UISegmentedControl) {
+      activityIndicator.isLarge = sender.selectedSegmentIndex != 0
    }
 
-   @IBAction func changedActivityIndicatorViewColorControlValue(sender: UISegmentedControl) {
-      activityIndicator.backgroundColor = UIColor.white
+   @IBAction func changedActivityIndicatorViewStyleControlValue(sender: UISegmentedControl) {
+      activityIndicator.backgroundColor = .white
       switchColorPartsHidden(hidden: true)
 
       switch sender.selectedSegmentIndex {
       case 0 :
-         if activityIndicator.largeStyle {
-            activityIndicator.activityIndicatorViewStyle = .largeBlack
-         } else {
-            activityIndicator.activityIndicatorViewStyle = .black
-         }
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: .black, tail: .lightGray)
 
-      case 1 :
-         activityIndicator.backgroundColor = UIColor.black
-         if activityIndicator.largeStyle {
-            activityIndicator.activityIndicatorViewStyle = .largeWhite
-         } else {
-            activityIndicator.activityIndicatorViewStyle = .white
-         }
-
-      case 2 :
+      default :
          switchColorPartsHidden(hidden: false)
-         let startColor = colors[startColorControl.selectedSegmentIndex]
-         let endColor = colors[endColorControl.selectedSegmentIndex]
-         if activityIndicator.largeStyle {
-            activityIndicator.activityIndicatorViewStyle = .largeColor(startColor, endColor)
-         } else {
-            activityIndicator.activityIndicatorViewStyle = .color(startColor, endColor)
-         }
-
-      default : break
+         let headColor = colors[startColorControl.selectedSegmentIndex]
+         let tailColor = colors[endColorControl.selectedSegmentIndex]
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: headColor, tail: tailColor)
       }
    }
 
-   @IBAction func changedStartColorControlValue(sender: UISegmentedControl) {
+   @IBAction func changedHeadColorControlValue(sender: UISegmentedControl) {
       let endColor = colors[endColorControl.selectedSegmentIndex]
       switch sender.selectedSegmentIndex {
       case 0 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(colors[0], endColor) : .color(colors[0], endColor)
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[0], tail: endColor)
 
       case 1 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(colors[1], endColor) : .color(colors[1], endColor)
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[1], tail: endColor)
 
       case 2 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(colors[2], endColor) : .color(colors[2], endColor)
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[2], tail: endColor)
 
       case 3 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(colors[3], endColor) : .color(colors[3], endColor)
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[3], tail: endColor)
 
       case 4 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(colors[4], endColor) : .color(colors[4], endColor)
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[4], tail: endColor)
 
       default : break
       }
    }
 
-   @IBAction func changedEndColorControlValue(sender: UISegmentedControl) {
+   @IBAction func changedTailColorControlValue(sender: UISegmentedControl) {
       let startColor = colors[startColorControl.selectedSegmentIndex]
       switch sender.selectedSegmentIndex {
       case 0 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(startColor, colors[0]) : .color(startColor, colors[0])
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[0])
 
       case 1 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(startColor, colors[1]) : .color(startColor, colors[1])
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[1])
 
       case 2 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(startColor, colors[2]) : .color(startColor, colors[2])
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[2])
 
       case 3 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(startColor, colors[3]) : .color(startColor, colors[3])
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[3])
 
       case 4 :
-         activityIndicator.activityIndicatorViewStyle = activityIndicator.largeStyle ? .largeColor(startColor, colors[4]) : .color(startColor, colors[4])
+         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[4])
 
       default : break
       }

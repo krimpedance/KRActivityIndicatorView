@@ -14,6 +14,7 @@
 		6B0AD5A01EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AD59E1EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift */; };
 		6B0AD5AB1EC2BA3700427FED /* KRActivityIndicatorView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 6B0AD59D1EC2B4F800427FED /* KRActivityIndicatorView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B0AD5AC1EC2BA3700427FED /* KRActivityIndicatorViewStyle.swift in Headers */ = {isa = PBXBuildFile; fileRef = 6B0AD59E1EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B0AD5AE1EC2CEBC00427FED /* KRActivityIndicatorPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AD5AD1EC2CEBC00427FED /* KRActivityIndicatorPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		6B0AD5871EC2B38000427FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B0AD59D1EC2B4F800427FED /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorView.swift; sourceTree = "<group>"; };
 		6B0AD59E1EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		6B0AD5AD1EC2CEBC00427FED /* KRActivityIndicatorPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				6B0AD59D1EC2B4F800427FED /* KRActivityIndicatorView.swift */,
 				6B0AD59E1EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift */,
+				6B0AD5AD1EC2CEBC00427FED /* KRActivityIndicatorPath.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				6B0AD5A01EC2B4F800427FED /* KRActivityIndicatorViewStyle.swift in Sources */,
 				6B0AD59F1EC2B4F800427FED /* KRActivityIndicatorView.swift in Sources */,
+				6B0AD5AE1EC2CEBC00427FED /* KRActivityIndicatorPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
