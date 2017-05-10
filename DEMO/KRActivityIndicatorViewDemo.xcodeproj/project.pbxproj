@@ -3,15 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B67FA691C6AE0EF004090BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67FA681C6AE0EF004090BD /* AppDelegate.swift */; };
 		4B67FA6B1C6AE0EF004090BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67FA6A1C6AE0EF004090BD /* ViewController.swift */; };
 		4B67FA6E1C6AE0EF004090BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B67FA6C1C6AE0EF004090BD /* Main.storyboard */; };
-		4B67FA7C1C6AE156004090BD /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67FA7B1C6AE156004090BD /* KRActivityIndicatorView.swift */; };
+		6B0AD5A21EC2B5B400427FED /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0AD5971EC2B41400427FED /* KRActivityIndicatorView.framework */; };
+		6B0AD5A31EC2B5B400427FED /* KRActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0AD5971EC2B41400427FED /* KRActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B0AD5961EC2B41400427FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B0AD5771EC2B38000427FED;
+			remoteInfo = KRActivityIndicatorView;
+		};
+		6B0AD5981EC2B41400427FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B0AD5801EC2B38000427FED;
+			remoteInfo = KRActivityIndicatorViewTests;
+		};
+		6B0AD5A41EC2B5B400427FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B0AD5761EC2B38000427FED;
+			remoteInfo = KRActivityIndicatorView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6B0AD5A61EC2B5B400427FED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6B0AD5A31EC2B5B400427FED /* KRActivityIndicatorView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B67FA651C6AE0EF004090BD /* KRActivityIndicatorViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRActivityIndicatorViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,7 +58,7 @@
 		4B67FA6A1C6AE0EF004090BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B67FA6D1C6AE0EF004090BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B67FA741C6AE0EF004090BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B67FA7B1C6AE156004090BD /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KRActivityIndicatorView.xcodeproj; path = ../KRActivityIndicatorView.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0AD5A21EC2B5B400427FED /* KRActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +78,7 @@
 			children = (
 				4B67FA671C6AE0EF004090BD /* KRActivityIndicatorViewDemo */,
 				4B67FA661C6AE0EF004090BD /* Products */,
+				6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +93,6 @@
 		4B67FA671C6AE0EF004090BD /* KRActivityIndicatorViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4B67FA7A1C6AE156004090BD /* KRActivityIndicatorView */,
 				4B67FA681C6AE0EF004090BD /* AppDelegate.swift */,
 				4B67FA6A1C6AE0EF004090BD /* ViewController.swift */,
 				4B67FA6C1C6AE0EF004090BD /* Main.storyboard */,
@@ -61,13 +101,13 @@
 			path = KRActivityIndicatorViewDemo;
 			sourceTree = "<group>";
 		};
-		4B67FA7A1C6AE156004090BD /* KRActivityIndicatorView */ = {
+		6B0AD5921EC2B41400427FED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B67FA7B1C6AE156004090BD /* KRActivityIndicatorView.swift */,
+				6B0AD5971EC2B41400427FED /* KRActivityIndicatorView.framework */,
+				6B0AD5991EC2B41400427FED /* KRActivityIndicatorViewTests.xctest */,
 			);
-			name = KRActivityIndicatorView;
-			path = ../../KRActivityIndicatorView;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,10 +120,13 @@
 				4B67FA611C6AE0EF004090BD /* Sources */,
 				4B67FA621C6AE0EF004090BD /* Frameworks */,
 				4B67FA631C6AE0EF004090BD /* Resources */,
+				6B0AD5A61EC2B5B400427FED /* Embed Frameworks */,
+				6B0AD5AA1EC2B88A00427FED /* Swift Lint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6B0AD5A51EC2B5B400427FED /* PBXTargetDependency */,
 			);
 			name = KRActivityIndicatorViewDemo;
 			productName = KRActivityIndicatorViewDemo;
@@ -97,16 +140,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Krimpedance;
 				TargetAttributes = {
 					4B67FA641C6AE0EF004090BD = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
 			buildConfigurationList = 4B67FA601C6AE0EF004090BD /* Build configuration list for PBXProject "KRActivityIndicatorViewDemo" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -116,12 +160,35 @@
 			mainGroup = 4B67FA5C1C6AE0EF004090BD;
 			productRefGroup = 4B67FA661C6AE0EF004090BD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B0AD5921EC2B41400427FED /* Products */;
+					ProjectRef = 6B0AD5911EC2B41400427FED /* KRActivityIndicatorView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4B67FA641C6AE0EF004090BD /* KRActivityIndicatorViewDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B0AD5971EC2B41400427FED /* KRActivityIndicatorView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KRActivityIndicatorView.framework;
+			remoteRef = 6B0AD5961EC2B41400427FED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B0AD5991EC2B41400427FED /* KRActivityIndicatorViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KRActivityIndicatorViewTests.xctest;
+			remoteRef = 6B0AD5981EC2B41400427FED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B67FA631C6AE0EF004090BD /* Resources */ = {
@@ -134,6 +201,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B0AD5AA1EC2B88A00427FED /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B67FA611C6AE0EF004090BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,11 +225,18 @@
 			files = (
 				4B67FA6B1C6AE0EF004090BD /* ViewController.swift in Sources */,
 				4B67FA691C6AE0EF004090BD /* AppDelegate.swift in Sources */,
-				4B67FA7C1C6AE156004090BD /* KRActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B0AD5A51EC2B5B400427FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRActivityIndicatorView;
+			targetProxy = 6B0AD5A41EC2B5B400427FED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4B67FA6C1C6AE0EF004090BD /* Main.storyboard */ = {
@@ -172,8 +263,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -195,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -216,8 +309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -233,9 +328,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -243,20 +339,26 @@
 		4B67FA781C6AE0EF004090BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.mond.krimpedance.KRActivityIndicatorViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4B67FA791C6AE0EF004090BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.mond.krimpedance.KRActivityIndicatorViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

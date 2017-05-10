@@ -8,14 +8,14 @@ You can add KRActivityIndicatorView from IB or ViewController.
 Please check it by [appetize.io](https://appetize.io/app/v73ez7gvuzzuhxecu4zqv4em0r?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
 
 https://www.youtube.com/watch?v=UZTlGpY0CU8
-　　　　
+
 [![](http://img.youtube.com/vi/UZTlGpY0CU8/0.jpg)](https://www.youtube.com/watch?v=UZTlGpY0CU8)
 
 ## Install
 Drag `KRActivityIndicatorView.swift` to your Xcode project.
 
 ## Usage
-(see sample Xcode project)  
+(see sample Xcode project)
 
 Usage is almost same as UIActivityIndicatorView.
 
