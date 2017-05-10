@@ -12,11 +12,13 @@ import UIKit
  */
 @IBDesignable
 public final class KRActivityIndicatorView: UIView {
+   fileprivate var animationLayer = CALayer()
+
    /// Activity indicator's head color (read-only).
    /// If you change color, change activityIndicatorViewStyle property.
    @IBInspectable public fileprivate(set) var headColor: UIColor = .black {
       willSet {
-         activityIndicatorViewStyle = .gradationColor(head: newValue, tail: tailColor)
+         style = .gradationColor(head: newValue, tail: tailColor)
       }
    }
 
@@ -24,7 +26,7 @@ public final class KRActivityIndicatorView: UIView {
    /// If you change color, change activityIndicatorViewStyle property.
    @IBInspectable public fileprivate(set) var tailColor: UIColor = .lightGray {
       willSet {
-         activityIndicatorViewStyle = .gradationColor(head: headColor, tail: newValue)
+         style = .gradationColor(head: headColor, tail: newValue)
       }
    }
 
@@ -41,7 +43,7 @@ public final class KRActivityIndicatorView: UIView {
    @IBInspectable public var hidesWhenStopped: Bool = false
 
    /// Activity indicator color style.
-   public var activityIndicatorViewStyle = KRActivityIndicatorViewStyle.gradationColor(head: .black, tail: .lightGray) {
+   public var style = KRActivityIndicatorViewStyle.gradationColor(head: .black, tail: .lightGray) {
       didSet { setNeedsDisplay() }
    }
 
@@ -49,8 +51,6 @@ public final class KRActivityIndicatorView: UIView {
    public var isAnimating: Bool {
       return animationLayer.animation(forKey: "rotate") != nil
    }
-
-   fileprivate var animationLayer = CALayer()
 
    public required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
@@ -73,9 +73,9 @@ public final class KRActivityIndicatorView: UIView {
     
     - parameter activityIndicatorStyle:    Activity indicator default color use of KRActivityIndicatorViewStyle
     */
-   public convenience init(activityIndicatorStyle style: KRActivityIndicatorViewStyle) {
+   public convenience init(style: KRActivityIndicatorViewStyle) {
       self.init(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-      activityIndicatorViewStyle = style
+      self.style = style
       backgroundColor = UIColor.clear
    }
 
@@ -92,7 +92,7 @@ public final class KRActivityIndicatorView: UIView {
 
       // draw ActivityIndicator
       let paths = KRActivityIndicatorPath.getPath(isLarge: isLarge)
-      let colors = activityIndicatorViewStyle.getGradientColors(dividedIn: paths.count)
+      let colors = style.getGradientColors(dividedIn: paths.count)
 
       paths.enumerated().forEach { index, path in
          let pathLayer = CAShapeLayer()
