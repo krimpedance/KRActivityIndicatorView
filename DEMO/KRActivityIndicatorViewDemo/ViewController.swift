@@ -79,13 +79,13 @@ extension ViewController {
 
       switch sender.selectedSegmentIndex {
       case 0 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: .black, tail: .lightGray)
+         activityIndicator.style = .gradationColor(head: .black, tail: .lightGray)
 
       default :
          switchColorPartsHidden(hidden: false)
          let headColor = colors[startColorControl.selectedSegmentIndex]
          let tailColor = colors[endColorControl.selectedSegmentIndex]
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: headColor, tail: tailColor)
+         activityIndicator.style = .gradationColor(head: headColor, tail: tailColor)
       }
    }
 
@@ -93,19 +93,19 @@ extension ViewController {
       let endColor = colors[endColorControl.selectedSegmentIndex]
       switch sender.selectedSegmentIndex {
       case 0 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[0], tail: endColor)
+         activityIndicator.style = .gradationColor(head: colors[0], tail: endColor)
 
       case 1 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[1], tail: endColor)
+         activityIndicator.style = .gradationColor(head: colors[1], tail: endColor)
 
       case 2 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[2], tail: endColor)
+         activityIndicator.style = .gradationColor(head: colors[2], tail: endColor)
 
       case 3 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[3], tail: endColor)
+         activityIndicator.style = .gradationColor(head: colors[3], tail: endColor)
 
       case 4 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: colors[4], tail: endColor)
+         activityIndicator.style = .gradationColor(head: colors[4], tail: endColor)
 
       default : break
       }
@@ -115,19 +115,19 @@ extension ViewController {
       let startColor = colors[startColorControl.selectedSegmentIndex]
       switch sender.selectedSegmentIndex {
       case 0 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[0])
+         activityIndicator.style = .gradationColor(head: startColor, tail: colors[0])
 
       case 1 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[1])
+         activityIndicator.style = .gradationColor(head: startColor, tail: colors[1])
 
       case 2 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[2])
+         activityIndicator.style = .gradationColor(head: startColor, tail: colors[2])
 
       case 3 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[3])
+         activityIndicator.style = .gradationColor(head: startColor, tail: colors[3])
 
       case 4 :
-         activityIndicator.activityIndicatorViewStyle = .gradationColor(head: startColor, tail: colors[4])
+         activityIndicator.style = .gradationColor(head: startColor, tail: colors[4])
 
       default : break
       }

@@ -1,49 +1,101 @@
+[日本語](./README_Ja.md)
+
 # KRActivityIndicatorView
-KRActivityIndicatorView is a simple and customizable activity indicator written in Swift2.
 
-You can add KRActivityIndicatorView from IB or ViewController.
+[![Version](https://img.shields.io/cocoapods/v/KRActivityIndicatorView.svg?style=flat)](http://cocoapods.org/pods/KRActivityIndicatorView)
+[![License](https://img.shields.io/cocoapods/l/KRActivityIndicatorView.svg?style=flat)](http://cocoapods.org/pods/KRActivityIndicatorView)
+[![Platform](https://img.shields.io/cocoapods/p/KRActivityIndicatorView.svg?style=flat)](http://cocoapods.org/pods/KRActivityIndicatorView)
+[![Download](https://img.shields.io/cocoapods/dt/KRActivityIndicatorView.svg?style=flat)](http://cocoapods.org/pods/KRActivityIndicatorView)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CI Status](http://img.shields.io/travis/krimpedance/KRActivityIndicatorView.svg?style=flat)](https://travis-ci.org/krimpedance/KRActivityIndicatorView)
 
+`KRActivityIndicatorView` is a simple and customizable activity indicator written in Swift.
 
-### Example
-Please check it by [appetize.io](https://appetize.io/app/v73ez7gvuzzuhxecu4zqv4em0r?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
+You can add KRActivityIndicatorView from IB and code.
 
-https://www.youtube.com/watch?v=UZTlGpY0CU8
+<img src="./Resources/demo.gif" height=400>
 
-[![](http://img.youtube.com/vi/UZTlGpY0CU8/0.jpg)](https://www.youtube.com/watch?v=UZTlGpY0CU8)
+## Features
+- Round indicator
+- Indicator color can be customized
 
-## Install
-Drag `KRActivityIndicatorView.swift` to your Xcode project.
+## Requirements
+- iOS 9.0+
+- Xcode 8.0+
+- Swift 3.0+
+
+## DEMO
+To run the example project, clone the repo, and open `KRActivityIndicatorViewDemo.xcodeproj` from the DEMO directory.
+
+or [appetize.io](https://appetize.io/app/v73ez7gvuzzuhxecu4zqv4em0r)
+
+## Installation
+KRActivityIndicatorView is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
+To install it, simply add the following line to your Podfile or Cartfile:
+
+```ruby
+# CocoaPods
+pod "KRActivityIndicatorView"
+```
+
+```ruby
+# Carthage
+github "Krimpedance/KRActivityIndicatorView"
+```
 
 ## Usage
-(see sample Xcode project)
+(see sample Xcode project in /Demo)
 
 Usage is almost same as UIActivityIndicatorView.
 
+#### Showing activity indicator
+
 Show simple KRActivityIndicatorView.
+
 ```swift
 let activityIndicator = KRActivityIndicatorView()
-self.view.addSubview(activityIndicator)
+view.addSubview(activityIndicator)
 ```
 
-Start and stop animation.
+With single color.
+
+```swift
+KRActivityIndicatorView(style: .color(.green))
+```
+
+With gradation color.
+
+```swift
+KRActivityIndicatorView(style: .gradationColor(head: .red, tail: .orange))
+```
+
+#### Start and stop animation.
+
 ```
 activityIndicator.startAnimating()
 activityIndicator.stopAnimating()
 ```
 
-## Configuration
+## Customization
+
 #### KRActivityIndicatorViewStyle
-* `.Black`, `.LargeBlack` - BlackColor to lightGrayColor gradation
-* `.White`, `.LargeBlack` - WhiteColor(alpha:1.0) to WhiteColor(alpha:0.9) gradation
-* `.Color(start, end)`, `.LargeColor(start, end)` - `start`, `end` is UIColor property. You can set gradient first and last color.
+
+* `color(color)` - The fill color of activity indicator is set to `color`.
+* `color(head: UIColor, tail: UIColor)` - The fill color of activity indicator is gradated from `head` color to `tail` color.
 
 #### Current available params on IB:
-* `headColor` - gradient first color.
-* `tailColor` - gradient end color.
-* `largeStyle` - Size of KRActivityIndicatorView (`on` is large)
+* `headColor` - gradient head color.
+* `tailColor` - gradient tail color.
+* `isLarge` - Size of KRActivityIndicatorView. Default(off) size is 20x20, Large size is 50x50.
 * `animating` - Animation of activity indicator when it's shown
 * `hidesWhenStopped` - calls `setHidden` when call `stopAnimating()`
 
+## Contributing to this project
+I'm seeking bug reports and feature requests.
+
+## Release Note
+- 2.0.0 : Available at CocoaPods and Carthage with Swift 3.
+- 1.0.0 : First version with Swift 2.
+
 ## License
-KRActivityIndicatorView is available under the MIT license.
-See the LICENSE file for more info.
+KRActivityIndicatorView is available under the MIT license. See the LICENSE file for more info.
