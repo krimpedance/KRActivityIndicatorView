@@ -15,6 +15,8 @@ IB, コードのどちらからでも利用できます.
 
 <img src="./Resources/demo.gif" height=400>
 
+HUD => https://github.com/krimpedance/KRProgressHUD
+
 ## 特徴
 - 丸いインジケータ
 - カラーのカスタマイズ性

@@ -15,6 +15,8 @@ You can add KRActivityIndicatorView from IB and code.
 
 <img src="./Resources/demo.gif" height=400>
 
+On HUD => https://github.com/krimpedance/KRProgressHUD
+
 ## Features
 - Round indicator
 - Indicator color can be customized
