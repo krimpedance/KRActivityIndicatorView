@@ -96,6 +96,7 @@ activityIndicator.stopAnimating()
 I'm seeking bug reports and feature requests.
 
 ## Release Note
+- 2.0.1 : Fixed bag of `hidesWhenStopped`.
 - 2.0.0 : Available at CocoaPods and Carthage with Swift 3.
 - 1.0.0 : First version with Swift 2.
 

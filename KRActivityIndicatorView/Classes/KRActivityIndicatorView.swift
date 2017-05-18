@@ -80,14 +80,13 @@ public final class KRActivityIndicatorView: UIView {
    }
 
    public override func draw(_ rect: CGRect) {
+      let layerSize: CGFloat = isLarge ? 50 : 20
       // recreate AnimationLayer
       animationLayer.removeFromSuperlayer()
       animationLayer = CALayer()
-
-      let layerSize: CGFloat = isLarge ? 50 : 20
       animationLayer.frame = CGRect(x: 0, y: 0, width: layerSize, height: layerSize)
-
       animationLayer.position = CGPoint(x: layer.position.x-layer.frame.origin.x, y: layer.position.y-layer.frame.origin.y)
+      animationLayer.isHidden = hidesWhenStopped
       layer.addSublayer(animationLayer)
 
       // draw ActivityIndicator
@@ -128,9 +127,6 @@ extension KRActivityIndicatorView {
 
    public func stopAnimating() {
       animationLayer.removeAllAnimations()
-
-      if hidesWhenStopped {
-         animationLayer.isHidden = true
-      }
+      animationLayer.isHidden = hidesWhenStopped
    }
 }

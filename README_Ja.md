@@ -96,6 +96,7 @@ activityIndicator.stopAnimating()
 バグや機能のリクエストがありましたら，気軽にコメントしてください．
 
 ## リリースノート
+- 2.0.1 : `hidesWhenStopped` のバグを修正.
 - 2.0.0 : CocoaPods, Carthageで利用できるようになりました.
 - 1.0.0 : 最初のリリース版です. (プロジェクト直入れ)
 

@@ -1,11 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "KRActivityIndicatorView"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "A simple and customizable activity indicator."
   s.description  = "KRActivityIndicatorView is a simple and customizable activity indicator on iOS."
   s.homepage     = "https://github.com/krimpedance/KRActivityIndicatorView"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-
 
   s.author       = { "krimpedance" => "krimpedance@gmail.com" }
   s.requires_arc = true
