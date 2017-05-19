@@ -16,16 +16,22 @@ public final class KRActivityIndicatorView: UIView {
 
    /// Activity indicator's head color (read-only).
    /// If you change color, change activityIndicatorViewStyle property.
-   @IBInspectable public fileprivate(set) var headColor: UIColor = .black {
-      willSet {
+   @IBInspectable public fileprivate(set) var headColor: UIColor {
+      get {
+         return style.headColor
+      }
+      set {
          style = .gradationColor(head: newValue, tail: tailColor)
       }
    }
 
    /// Activity indicator's tail color (read-only).
    /// If you change color, change activityIndicatorViewStyle property.
-   @IBInspectable public fileprivate(set) var tailColor: UIColor = .lightGray {
-      willSet {
+   @IBInspectable public fileprivate(set) var tailColor: UIColor {
+      get {
+         return style.tailColor
+      }
+      set {
          style = .gradationColor(head: headColor, tail: newValue)
       }
    }

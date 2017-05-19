@@ -16,23 +16,23 @@ import UIKit
 public enum KRActivityIndicatorViewStyle {
    case color(UIColor)
    case gradationColor(head: UIColor, tail: UIColor)
-}
 
-extension KRActivityIndicatorViewStyle {
-   var headColor: UIColor {
+   public var headColor: UIColor {
       switch self {
       case let .color(color):  return color
       case let .gradationColor(head: color, tail: _) :  return color
       }
    }
 
-   var tailColor: UIColor {
+   public var tailColor: UIColor {
       switch self {
       case let .color(color):  return color
       case let .gradationColor(head: _, tail: color) :  return color
       }
    }
+}
 
+extension KRActivityIndicatorViewStyle {
    func getGradientColors(dividedIn num: Int) -> [UIColor] {
       let gradient = CAGradientLayer()
       gradient.frame = CGRect(x: 0, y: 0, width: 2, height: (num-1) * 10)

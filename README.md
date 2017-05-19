@@ -96,9 +96,9 @@ activityIndicator.stopAnimating()
 I'm seeking bug reports and feature requests.
 
 ## Release Note
+- 2.0.2 : Fixed bag which don't change `headColor` and 'tailColor'.
 - 2.0.1 : Fixed bag of `hidesWhenStopped`.
 - 2.0.0 : Available at CocoaPods and Carthage with Swift 3.
-- 1.0.0 : First version with Swift 2.
 
 ## License
 KRActivityIndicatorView is available under the MIT license. See the LICENSE file for more info.

@@ -49,8 +49,8 @@ extension KRActivityIndicatorViewTests {
 extension KRActivityIndicatorViewTests {
    func testInitialize() {
       let view = KRActivityIndicatorView(style: .gradationColor(head: .red, tail: .green))
-      XCTAssertEqual(view.style.headColor, .red)
-      XCTAssertEqual(view.style.tailColor, .green)
+      XCTAssertEqual(view.headColor, .red)
+      XCTAssertEqual(view.tailColor, .green)
    }
 
    func testAnimationState() {

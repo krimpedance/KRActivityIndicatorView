@@ -85,7 +85,7 @@ activityIndicator.stopAnimating()
 * `color(color)` - インジケータの色は `color` になります.
 * `color(head: UIColor, tail: UIColor)` - インジケータの色は, `head` の色から `tail` の色へのグラデーションになります.
 
-#### Current available params on IB:
+#### IBで設定できるパラメータ:
 * `headColor` - グラデーションの開始色
 * `tailColor` - グラデーションの終了色
 * `isLarge` - KRActivityIndicatorViewのサイズ設定. 初期(off)サイズは20x20で, 拡大時が50x50になります.
@@ -96,9 +96,9 @@ activityIndicator.stopAnimating()
 バグや機能のリクエストがありましたら，気軽にコメントしてください．
 
 ## リリースノート
+- 2.0.2 : `headColor` と 'tailColor'の値が変わらないバグを修正.
 - 2.0.1 : `hidesWhenStopped` のバグを修正.
 - 2.0.0 : CocoaPods, Carthageで利用できるようになりました.
-- 1.0.0 : 最初のリリース版です. (プロジェクト直入れ)
 
 ## ライセンス
 KRActivityIndicatorViewはMITライセンスに準拠しています.
