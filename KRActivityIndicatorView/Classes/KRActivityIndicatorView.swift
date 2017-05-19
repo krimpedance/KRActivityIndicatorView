@@ -39,18 +39,22 @@ public final class KRActivityIndicatorView: UIView {
    /// Size of activity indicator.
    /// Default(false) size is 20x20, large size is 50x50.
    @IBInspectable public var isLarge: Bool = false {
-      didSet { setNeedsDisplay() }
+      didSet { viewResized() }
    }
 
    /// Animation of activity indicator when it's shown.
-   @IBInspectable public var animating: Bool = true
+   @IBInspectable public var animating: Bool = true {
+      didSet { animating ? startAnimating() : stopAnimating() }
+   }
 
    /// set `true` to `isHidden` when call `stopAnimating()`
-   @IBInspectable public var hidesWhenStopped: Bool = false
+   @IBInspectable public var hidesWhenStopped: Bool = false {
+      didSet { animationLayer.isHidden = !isAnimating && hidesWhenStopped }
+   }
 
    /// Activity indicator color style.
    public var style = KRActivityIndicatorViewStyle.gradationColor(head: .black, tail: .lightGray) {
-      didSet { setNeedsDisplay() }
+      didSet { drawIndicatorPath() }
    }
 
    /// Whether view performs animation
@@ -61,16 +65,19 @@ public final class KRActivityIndicatorView: UIView {
    public required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
       backgroundColor = UIColor.clear
+      layer.addSublayer(animationLayer)
    }
 
    public override init(frame: CGRect) {
       super.init(frame: frame)
       backgroundColor = UIColor.clear
+      layer.addSublayer(animationLayer)
    }
 
    public convenience init() {
       self.init(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
       backgroundColor = UIColor.clear
+      layer.addSublayer(animationLayer)
    }
 
    /**
@@ -83,32 +90,12 @@ public final class KRActivityIndicatorView: UIView {
       self.init(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
       self.style = style
       backgroundColor = UIColor.clear
+      layer.addSublayer(animationLayer)
    }
 
-   public override func draw(_ rect: CGRect) {
-      let layerSize: CGFloat = isLarge ? 50 : 20
-      // recreate AnimationLayer
-      animationLayer.removeFromSuperlayer()
-      animationLayer = CALayer()
-      animationLayer.frame = CGRect(x: 0, y: 0, width: layerSize, height: layerSize)
-      animationLayer.position = CGPoint(x: layer.position.x-layer.frame.origin.x, y: layer.position.y-layer.frame.origin.y)
-      animationLayer.isHidden = hidesWhenStopped
-      layer.addSublayer(animationLayer)
-
-      // draw ActivityIndicator
-      let paths = KRActivityIndicatorPath.getPath(isLarge: isLarge)
-      let colors = style.getGradientColors(dividedIn: paths.count)
-
-      paths.enumerated().forEach { index, path in
-         let pathLayer = CAShapeLayer()
-         pathLayer.frame = animationLayer.bounds
-         pathLayer.fillColor = colors[index].cgColor
-         pathLayer.lineWidth = 0
-         pathLayer.path = path
-         animationLayer.addSublayer(pathLayer)
-      }
-
-      // animation
+   public override func layoutSubviews() {
+      super.layoutSubviews()
+      viewResized()
       if animating { startAnimating() }
    }
 }
@@ -134,5 +121,31 @@ extension KRActivityIndicatorView {
    public func stopAnimating() {
       animationLayer.removeAllAnimations()
       animationLayer.isHidden = hidesWhenStopped
+   }
+}
+
+private extension KRActivityIndicatorView {
+   func viewResized() {
+      let layerSize: CGFloat = isLarge ? 50 : 20
+      animationLayer.frame = CGRect(x: 0, y: 0, width: layerSize, height: layerSize)
+      animationLayer.position = CGPoint(x: layer.position.x-layer.frame.origin.x, y: layer.position.y-layer.frame.origin.y)
+      animationLayer.isHidden = !isAnimating && hidesWhenStopped
+      drawIndicatorPath()
+   }
+
+   func drawIndicatorPath() {
+      animationLayer.sublayers?.forEach { $0.removeFromSuperlayer() }
+
+      let paths = KRActivityIndicatorPath.getPath(isLarge: isLarge)
+      let colors = style.getGradientColors(dividedIn: paths.count)
+
+      paths.enumerated().forEach { index, path in
+         let pathLayer = CAShapeLayer()
+         pathLayer.frame = animationLayer.bounds
+         pathLayer.fillColor = colors[index].cgColor
+         pathLayer.lineWidth = 0
+         pathLayer.path = path
+         animationLayer.addSublayer(pathLayer)
+      }
    }
 }
