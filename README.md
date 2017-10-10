@@ -96,6 +96,7 @@ activityIndicator.stopAnimating()
 I'm seeking bug reports and feature requests.
 
 ## Release Note
+- 2.1.1 : Supported from iOS 8.0.
 - 2.1.0 : Available at CocoaPods and Carthage with Xcode9 and Swift4.
 - 2.0.2 : Fixed bag which don't change `headColor` and 'tailColor'.
 
