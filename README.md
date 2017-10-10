@@ -22,7 +22,7 @@ On HUD => https://github.com/krimpedance/KRProgressHUD
 - Indicator color can be customized
 
 ## Requirements
-- iOS 10.0+
+- iOS 8.0+
 - Xcode 9.0+
 - Swift 4.0+
 

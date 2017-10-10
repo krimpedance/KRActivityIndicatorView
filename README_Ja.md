@@ -22,7 +22,7 @@ HUD => https://github.com/krimpedance/KRProgressHUD
 - カラーのカスタマイズ性
 
 ## 必要環境
-- iOS 10.0+
+- iOS 8.0+
 - Xcode 9.0+
 - Swift 4.0+
 
