@@ -13,7 +13,7 @@
 
 IB, コードのどちらからでも利用できます.
 
-<img src="./Resources/demo.gif" height=400>
+<img src="https://github.com/krimpedance/Resources/blob/master/KRActivityIndicatorView/demo.gif" height=400>
 
 HUD => https://github.com/krimpedance/KRProgressHUD
 

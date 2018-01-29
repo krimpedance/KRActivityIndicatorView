@@ -13,7 +13,7 @@
 
 You can add KRActivityIndicatorView from IB and code.
 
-<img src="./Resources/demo.gif" height=400>
+<img src="https://github.com/krimpedance/Resources/blob/master/KRActivityIndicatorView/demo.gif" height=400>
 
 On HUD => https://github.com/krimpedance/KRProgressHUD
 
