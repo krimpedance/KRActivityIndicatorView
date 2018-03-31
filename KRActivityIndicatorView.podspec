@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KRActivityIndicatorView"
-  s.version      = "2.1.1"
+  s.version      = "2.1.2"
   s.summary      = "A simple and customizable activity indicator."
   s.description  = "KRActivityIndicatorView is a simple and customizable activity indicator on iOS."
   s.homepage     = "https://github.com/krimpedance/KRActivityIndicatorView"

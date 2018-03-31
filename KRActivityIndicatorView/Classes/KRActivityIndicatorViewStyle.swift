@@ -69,6 +69,6 @@ private extension CAGradientLayer {
       let blue: CGFloat = CGFloat(pixel[2])/255.0
       let alpha: CGFloat = CGFloat(pixel[3])/255.0
 
-      return UIColor(red:red, green: green, blue:blue, alpha:alpha)
+      return UIColor(red: red, green: green, blue: blue, alpha: alpha)
    }
 }
