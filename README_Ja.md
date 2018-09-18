@@ -23,8 +23,8 @@ HUD => https://github.com/krimpedance/KRProgressHUD
 
 ## 必要環境
 - iOS 8.0+
-- Xcode 9.0+
-- Swift 4.0+
+- Xcode 10.0+
+- Swift 4.2+
 
 ## デモ
 `DEMO/`以下にあるサンプルプロジェクトから確認してください．
@@ -96,10 +96,10 @@ activityIndicator.stopAnimating()
 バグや機能のリクエストがありましたら，気軽にコメントしてください．
 
 ## リリースノート
+- 2.2.0 : Swift 4.2 に対応.
 - 2.1.2 : Swift 4.1 に対応.
 - 2.1.1 : iOS 8.0 から対応するように変更.
 - 2.1.0 : Xcode9, Swift4の環境でCocoaPods, Carthageでの利用が可能になりました.
-- 2.0.2 : `headColor` と 'tailColor'の値が変わらないバグを修正.
 
 ## ライセンス
 KRActivityIndicatorViewはMITライセンスに準拠しています.
