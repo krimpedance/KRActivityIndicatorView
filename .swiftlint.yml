@@ -3,6 +3,7 @@ disabled_rules:
   - file_length
 included:
   - KRActivityIndicatorView
+  - KRActivityIndicatorViewTests
 excluded:
   - Pods
 type_body_length:

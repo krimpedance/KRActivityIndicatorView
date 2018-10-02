@@ -1,0 +1,9 @@
+# Podfile
+platform :ios, '11.4'
+
+target 'KRActivityIndicatorViewDemo' do
+  use_frameworks!
+
+  pod 'KRActivityIndicatorView', path: '../KRActivityIndicatorView.podspec'
+
+end
