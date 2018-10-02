@@ -62,13 +62,13 @@ view.addSubview(activityIndicator)
 単色を設定しつつ初期化
 
 ```swift
-KRActivityIndicatorView(style: .color(.green))
+KRActivityIndicatorView(colors: [.green])
 ```
 
 グラデーションカラーを設定しつつ初期化
 
 ```swift
-KRActivityIndicatorView(style: .gradationColor(head: .red, tail: .orange))
+KRActivityIndicatorView(colors: [.red, .orange, .white])
 ```
 
 #### アニメーションの開始/終了
@@ -80,15 +80,11 @@ activityIndicator.stopAnimating()
 
 ## カスタマイズ
 
-#### KRActivityIndicatorViewStyle
-
-* `color(color)` - インジケータの色は `color` になります.
-* `color(head: UIColor, tail: UIColor)` - インジケータの色は, `head` の色から `tail` の色へのグラデーションになります.
-
 #### IBで設定できるパラメータ:
 * `headColor` - グラデーションの開始色
 * `tailColor` - グラデーションの終了色
-* `isLarge` - KRActivityIndicatorViewのサイズ設定. 初期(off)サイズは20x20で, 拡大時が50x50になります.
+* `numberOfDots` - インジケータのドットの数.
+* `duration` - 一回転する時間.
 * `animating` - インジケータの表示時にアニメーションを開始するかどうかの設定.
 * `hidesWhenStopped` - アニメーションを終了した時にインジケータを隠すかどうかの設定.
 
@@ -96,10 +92,12 @@ activityIndicator.stopAnimating()
 バグや機能のリクエストがありましたら，気軽にコメントしてください．
 
 ## リリースノート
-- 2.2.0 : Swift 4.2 に対応.
-- 2.1.2 : Swift 4.1 に対応.
-- 2.1.1 : iOS 8.0 から対応するように変更.
-- 2.1.0 : Xcode9, Swift4の環境でCocoaPods, Carthageでの利用が可能になりました.
++ 3.0.0 :
+  - インジケータのサイズを自由に変更可能
+  - グラデーションカラーを数段階設定可能
+
++ 2.2.0 :
+  - Swift 4.2 に対応.
 
 ## ライセンス
 KRActivityIndicatorViewはMITライセンスに準拠しています.
