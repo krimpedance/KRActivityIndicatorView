@@ -178,7 +178,12 @@ private extension KRActivityIndicatorView {
     func getGradientColors(dividedIn num: Int) -> [UIColor] {
         let gradient = CAGradientLayer()
         gradient.frame = CGRect(x: 0, y: 0, width: 2, height: (num-1) * 10 + 1)
-        gradient.colors = colors.map { $0.cgColor }
+
+        switch colors.count {
+        case 0:  gradient.colors = [UIColor.black.cgColor, UIColor.lightGray.cgColor]
+        case 1:  gradient.colors = [colors.first!.cgColor, colors.first!.cgColor]
+        default: gradient.colors = colors.map { $0.cgColor }
+        }
 
         return (0..<num).map {
             let point = CGPoint(x: 1, y: 10*CGFloat($0))
