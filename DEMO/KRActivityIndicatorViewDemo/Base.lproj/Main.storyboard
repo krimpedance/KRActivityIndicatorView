@@ -31,7 +31,6 @@
                                                     <constraint firstAttribute="width" constant="68" id="q0B-PG-0DL"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>

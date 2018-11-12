@@ -90,6 +90,9 @@ activityIndicator.stopAnimating()
 
 
 ## Release Note
++ 3.0.1 :
+  - Fixed bug that indicator doesn't start animation.
+
 + 3.0.0 :
   - Indicator view size changable
   - Multiple gradiate colors settable

@@ -120,6 +120,7 @@ private extension KRActivityIndicatorView {
         animationLayer.frame = layer.bounds
         animationLayer.isHidden = !isAnimating && hidesWhenStopped
         drawIndicatorPath()
+        if animating { startAnimating() }
     }
 
     func drawIndicatorPath() {
