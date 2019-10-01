@@ -23,8 +23,8 @@ On HUD => https://github.com/krimpedance/KRProgressHUD
 
 ## Requirements
 - iOS 8.0+
-- Xcode 10.2+
-- Swift 5.0+
+- Xcode 11.0+
+- Swift 5.1+
 
 ## DEMO
 To run the example project, clone the repo, and open `KRActivityIndicatorViewDemo.xcodeproj` from the DEMO directory.
@@ -90,6 +90,12 @@ activityIndicator.stopAnimating()
 
 
 ## Release Note
++ 3.0.4 :
+  - Support SwiftPM
+
++ 3.0.3 :
+  - Compatible with iOS 13 and Swift 5.1
+
 + 3.0.2 :
   - Compatible with Swift 5.0
 
@@ -100,9 +106,6 @@ activityIndicator.stopAnimating()
 + 3.0.0 :
   - Indicator view size changable
   - Multiple gradiate colors settable
-
-+ 2.2.0 :
-  - Compatible with Swift 4.2
 
 ## License
 KRActivityIndicatorView is available under the MIT license. See the LICENSE file for more info.
