@@ -5,7 +5,7 @@
 //  Copyright © 2018 Krimpedance. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension CAGradientLayer {
     func color(point: CGPoint) -> UIColor {
