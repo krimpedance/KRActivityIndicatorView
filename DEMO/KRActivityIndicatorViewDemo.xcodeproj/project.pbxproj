@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -136,7 +136,7 @@
 				};
 			};
 			buildConfigurationList = 4B67FA601C6AE0EF004090BD /* Build configuration list for PBXProject "KRActivityIndicatorViewDemo" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -354,7 +354,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B987A9F610F05CC14CDA989 /* Pods-KRActivityIndicatorViewDemo.debug.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3.0.3;
+				CURRENT_PROJECT_VERSION = 3.0.5;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -362,7 +362,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.3;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -373,7 +373,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7355975282D9F3726DA0A630 /* Pods-KRActivityIndicatorViewDemo.release.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3.0.3;
+				CURRENT_PROJECT_VERSION = 3.0.5;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -381,7 +381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.3;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
