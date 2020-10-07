@@ -22,9 +22,9 @@ HUD => https://github.com/krimpedance/KRProgressHUD
 - カラーのカスタマイズ性
 
 ## 必要環境
-- iOS 8.0+
-- Xcode 11.0+
-- Swift 5.1+
+- iOS 9.0+
+- Xcode 12.0+
+- Swift 5.3+
 
 ## デモ
 `DEMO/`以下にあるサンプルプロジェクトから確認してください．
@@ -92,22 +92,8 @@ activityIndicator.stopAnimating()
 バグや機能のリクエストがありましたら，気軽にコメントしてください．
 
 ## リリースノート
-+ 3.0.4 :
-  - SwiftPM に対応
-
-+ 3.0.3 :
-  - iOS 13, Swift 5.1 に対応.
-
-+ 3.0.2 :
-  - Swift 5.0 に対応.
-
-+ 3.0.1 :
-  - インジケータがアニメーションしないバグを修正
-  - `colors` が2未満の時のバグを修正
-
-+ 3.0.0 :
-  - インジケータのサイズを自由に変更可能
-  - グラデーションカラーを数段階設定可能
++ 3.0.6 :
+  - Xcode 12 に対応
 
 ## ライセンス
 KRActivityIndicatorViewはMITライセンスに準拠しています.

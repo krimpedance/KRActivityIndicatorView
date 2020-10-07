@@ -22,9 +22,9 @@ On HUD => https://github.com/krimpedance/KRProgressHUD
 - Indicator color can be customized
 
 ## Requirements
-- iOS 8.0+
-- Xcode 11.0+
-- Swift 5.1+
+- iOS 9.0+
+- Xcode 12.0+
+- Swift 5.3+
 
 ## DEMO
 To run the example project, clone the repo, and open `KRActivityIndicatorViewDemo.xcodeproj` from the DEMO directory.
@@ -90,22 +90,8 @@ activityIndicator.stopAnimating()
 
 
 ## Release Note
-+ 3.0.4 :
-  - Support SwiftPM
-
-+ 3.0.3 :
-  - Compatible with iOS 13 and Swift 5.1
-
-+ 3.0.2 :
-  - Compatible with Swift 5.0
-
-+ 3.0.1 :
-  - Fixed bug that indicator doesn't start animation.
-  - Fixed bug when number of colors is less than 2.
-
-+ 3.0.0 :
-  - Indicator view size changable
-  - Multiple gradiate colors settable
++ 3.0.6 :
+  - Update for Xcode 12
 
 ## License
 KRActivityIndicatorView is available under the MIT license. See the LICENSE file for more info.

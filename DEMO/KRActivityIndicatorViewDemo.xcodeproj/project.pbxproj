@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -126,7 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Krimpedance;
 				TargetAttributes = {
 					4B67FA641C6AE0EF004090BD = {
@@ -136,7 +136,7 @@
 				};
 			};
 			buildConfigurationList = 4B67FA601C6AE0EF004090BD /* Build configuration list for PBXProject "KRActivityIndicatorViewDemo" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -266,6 +266,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -322,6 +323,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -354,15 +356,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B987A9F610F05CC14CDA989 /* Pods-KRActivityIndicatorViewDemo.debug.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3.0.5;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 3.0.6;
+				DEVELOPMENT_TEAM = C9S69ME8A5;
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.5;
+				MARKETING_VERSION = 3.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -373,15 +375,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7355975282D9F3726DA0A630 /* Pods-KRActivityIndicatorViewDemo.release.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3.0.5;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 3.0.6;
+				DEVELOPMENT_TEAM = C9S69ME8A5;
 				INFOPLIST_FILE = KRActivityIndicatorViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.5;
+				MARKETING_VERSION = 3.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krimpedance.KRActivityIndicatorViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
