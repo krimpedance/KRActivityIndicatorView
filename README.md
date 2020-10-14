@@ -90,6 +90,9 @@ activityIndicator.stopAnimating()
 
 
 ## Release Note
++ 3.0.7 :
+  - Support for iOS 11 and below
+
 + 3.0.6 :
   - Update for Xcode 12
 
